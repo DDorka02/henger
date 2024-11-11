@@ -1,4 +1,4 @@
-package hu.szamalk;
+package hu.szamalk.modell;
 
 
 public class TomorHenger extends MertaniHEnger {

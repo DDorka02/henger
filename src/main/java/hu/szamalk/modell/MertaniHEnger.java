@@ -1,4 +1,4 @@
-package hu.szamalk;
+package hu.szamalk.modell;
 
 public class MertaniHEnger {
     private static int hengerDarab = 0;
@@ -42,4 +42,9 @@ public class MertaniHEnger {
     public static int getHengerDarab() {
         return hengerDarab;
     }
+
+    protected static void csokkentHengerDarab() {
+        hengerDarab--;
+    }
 }
+

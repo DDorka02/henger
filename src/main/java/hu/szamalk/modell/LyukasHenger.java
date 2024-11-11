@@ -1,4 +1,4 @@
-package hu.szamalk;
+package hu.szamalk.modell;
 
 public class LyukasHenger extends TomorHenger {
     private double falvastagsag;
@@ -25,5 +25,8 @@ public class LyukasHenger extends TomorHenger {
         double r = this.getSugar()-this.falvastagsag;
        MertaniHEnger belso = new MertaniHEnger(r, this.getMagassag());
         return super.terfogat() - belso.terfogat();
+
+
+
     }
 }

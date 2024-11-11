@@ -1,5 +1,9 @@
 package hu.szamalk;
 
+import hu.szamalk.modell.LyukasHenger;
+import hu.szamalk.modell.MertaniHEnger;
+import hu.szamalk.modell.TomorHenger;
+
 import java.util.ArrayList;
 import java.util.List;
 
