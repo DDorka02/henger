@@ -1,23 +1,22 @@
 package hu.szamalk;
 
 import hu.szamalk.modell.LyukasHenger;
-import hu.szamalk.modell.MertaniHEnger;
-import hu.szamalk.modell.TomorHenger;
+import hu.szamalk.modell.MertaniHenger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HengerProgram {
-    private List<MertaniHEnger> hengerek;
+    private List<MertaniHenger> hengerek;
 
     public static void main(String[] args) {
         new HengerProgram().run();
     }
 
     public void run(){
-        int db = MertaniHEnger.getHengerDarab();
+        int db = MertaniHenger.getHengerDarab();
         System.out.printf(" A feladatban használt hengerek: (%d db)\n",db);
-        for (MertaniHEnger henger : this.lista()) {
+        for (MertaniHenger henger : this.lista()) {
             System.out.println(henger);
         }
 
@@ -25,7 +24,7 @@ public class HengerProgram {
 
         System.out.println("Csövek súlya: " + this.csovekSulya());
 
-        System.out.println("db: " + MertaniHEnger.getHengerDarab());
+        System.out.println("db: " + MertaniHenger.getHengerDarab());
     }
 
     public HengerProgram(){
@@ -42,15 +41,15 @@ public class HengerProgram {
 
     public double atlagTerfogat(){
         double ossz = 0;
-        for (MertaniHEnger henger : hengerek) {
+        for (MertaniHenger henger : hengerek) {
             ossz += henger.terfogat();
         }
-        return ossz / MertaniHEnger.getHengerDarab();
+        return ossz / MertaniHenger.getHengerDarab();
     }
 
     public double csovekSulya(){
         double o= 0;
-        for (MertaniHEnger henger : hengerek) {
+        for (MertaniHenger henger : hengerek) {
             if (henger instanceof LyukasHenger)
             {
                 o += ((LyukasHenger) henger).suly();
@@ -59,7 +58,7 @@ public class HengerProgram {
         return o;
     }
 
-    private List<MertaniHEnger> lista(){
+    private List<MertaniHenger> lista(){
         return hengerek;
     }
 

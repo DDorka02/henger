@@ -1,11 +1,11 @@
 package hu.szamalk.modell;
 
-public class MertaniHEnger {
+public class MertaniHenger {
     private static int hengerDarab = 0;
     private double sugar, magassag;
 
-    public MertaniHEnger(double sugar, double magassag) {
-        MertaniHEnger.hengerDarab++;
+    public MertaniHenger(double sugar, double magassag) {
+        MertaniHenger.hengerDarab++;
         this.sugar = sugar;
         this.magassag = magassag;
     }

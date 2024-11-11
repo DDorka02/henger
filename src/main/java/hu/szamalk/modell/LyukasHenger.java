@@ -23,7 +23,7 @@ public class LyukasHenger extends TomorHenger {
     @Override
     public double terfogat() {
         double r = this.getSugar()-this.falvastagsag;
-       MertaniHEnger belso = new MertaniHEnger(r, this.getMagassag());
+       MertaniHenger belso = new MertaniHenger(r, this.getMagassag());
         return super.terfogat() - belso.terfogat();
 
 

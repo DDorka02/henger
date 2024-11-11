@@ -1,7 +1,7 @@
 package hu.szamalk.modell;
 
 
-public class TomorHenger extends MertaniHEnger {
+public class TomorHenger extends MertaniHenger {
     private double fajsuly;
 
     public TomorHenger(double sugar, double magassag) {
