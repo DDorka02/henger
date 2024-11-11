@@ -20,38 +20,39 @@ public class HengerProgram {
         System.out.println("Hengerek átlagtérfogata: " + this.atlagTerfogat());
 
         System.out.println("Csövek súlya: " + this.csovekSulya());
+
+        System.out.println("db: " + MertaniHEnger.getHengerDarab());
     }
 
     public HengerProgram(){
         hengerek = new ArrayList<>();
-        hengerek.add(new MertaniHEnger(1,1));
-        hengerek.add(new TomorHenger(1,1));
-        hengerek.add(new TomorHenger(1,1, .5));
-        hengerek.add(new LyukasHenger(1,1,.1));
-        hengerek.add(new LyukasHenger(1,1,.5));
-        hengerek.add(new LyukasHenger(1,1,.9));
+        //hengerek.add(new MertaniHEnger(1,1));
+        //hengerek.add(new TomorHenger(1,1));
+       // hengerek.add(new TomorHenger(1,1, .5));
+       // hengerek.add(new LyukasHenger(1,1,.1));
+       // hengerek.add(new LyukasHenger(1,1,.5));
+        //hengerek.add(new LyukasHenger(1,1,1));
+        hengerek.add(new LyukasHenger(1,1,1));
+
     }
 
     public double atlagTerfogat(){
         double ossz = 0;
         for (MertaniHEnger henger : hengerek) {
             ossz += henger.terfogat();
-
         }
-
-        return ossz = MertaniHEnger.getHengerDarab();
+        return ossz / MertaniHEnger.getHengerDarab();
     }
 
     public double csovekSulya(){
-        double ossz= 0;
+        double o= 0;
         for (MertaniHEnger henger : hengerek) {
             if (henger instanceof LyukasHenger)
             {
-                ossz += ((LyukasHenger) henger).suly();
+                o += ((LyukasHenger) henger).suly();
             }
         }
-
-        return ossz;
+        return o;
     }
 
     private List<MertaniHEnger> lista(){

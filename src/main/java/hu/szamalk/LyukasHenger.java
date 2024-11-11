@@ -15,13 +15,15 @@ public class LyukasHenger extends TomorHenger {
     @Override
     public String toString() {
         String os = super.toString();
-        return os + " <|-- LyukasHenger{" +
+        return os + " <-- LyukasHenger{" +
                 "falvastagsag=" + falvastagsag +
                 '}';
     }
 
     @Override
     public double terfogat() {
-        return super.terfogat();
+        double r = this.getSugar()-this.falvastagsag;
+       MertaniHEnger belso = new MertaniHEnger(r, this.getMagassag());
+        return super.terfogat() - belso.terfogat();
     }
 }
